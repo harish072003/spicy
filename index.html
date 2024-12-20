@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speicy</title>
+    <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<style>
+   
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+#navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: .5rem 5rem;
+    box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+    background-color: black;
+}
+.navbar .navbar-brand {
+    font-size: 25px;
+    font-weight: 800;
+    color: #29f900 !important;
+}
+#navbarSupportedContent a {
+    color: #fff;
+    border-bottom: 2px solid transparent;
+}
+#navbarSupportedContent a:hover {
+    border-bottom: 2px solid #29f900;
+}
+#navbarSupportedContent button {
+    background: #29f900;
+    width: 5rem;
+    border-radius: 15px;
+}
+section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Home {
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.60)), url(3708_Spices20on20Hand_opt_780x660.jpg);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    text-align: center;
+}
+#Home h1 {
+    font-size: 3rem;
+    color: white;
+    letter-spacing: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 0px 1px 0px #ccc,
+                 0px 2px 0px #ccc,
+                 0px 3px 0px #ccc,
+                 0px 4px 0px #ccc,
+                 0px 5px 0px #ccc;       
+}
+#Home p {
+    font-size: 1.2rem;
+    color: white;
+}
+#Home .input-group {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+}
+.signin {
+    background: #29f900 !important;
+    color: black !important;
+    box-shadow: 2px 4px 5px rgba(0,0,0,.3);
+}
+#About {
+    background: linear-gradient(to right,#ea1d6f,#eb466b 100%);
+}
+#About h1 {
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    margin: 1rem 0;
+}
+#About p {
+    color: white;
+}
+.Product {
+    background: #e5e5e5;
+}
+.Product h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-align: center;
+    margin: 1rem 0;
+}
+.Product img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.card {
+    background: #e5e5e5 !important;
+    border: none !important;
+    box-shadow: 15px 20px 20px rgba(0,0,0,.3),
+                inset 4px 4px 10px white;
+    border-radius: 20px !important;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    text-align: center;
+}
+.card:hover {
+    box-shadow: inset 5px 5px 10px rgba(0,0,0,.3),
+                inset -4px -4px 10px white;
+    transition: .2s;
+}
+.Contact img {
+    height: 100%;
+}
+.box {
+    width: 80% !important;
+    margin-top: 10px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+#Contact input, #Contact textarea {
+    margin: 10px 0;
+}
+footer {
+    width: 100%;
+    height: 30px;
+    background: black;
+    margin-top: -30px;
+    text-align: center;
+    color: white;
+    padding: 3px;
+}
+
+/* Media Queries for Mobile View */
+@media (max-width: 991px) {
+    #navbar {
+        padding: .5rem 2rem;
+    }
+    #Home h1 {
+        font-size: 2.5rem;
+    }
+    #Home p {
+        font-size: 1rem;
+    }
+    .Product h1, #About h1 {
+        font-size: 2rem;
+    }
+    .Product .card, .Contact img {
+        margin: 1rem;
+        width: calc(100% - 2rem);
+    }
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        padding: .5rem 1rem;
+    }
+    .navbar-nav {
+        flex-direction: column;
+    }
+    .navbar-nav .nav-item {
+        margin-bottom: 1rem;
+    }
+    #navbarSupportedContent button {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .card img {
+        height: auto;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 14px;
+    }
+    #Home h1 {
+        font-size: 2rem;
+    }
+    #Home p {
+        font-size: 0.9rem;
+    }
+    #Home .input-group {
+        width: 90%;
+    }
+    .Product h1, #About h1 {
+        font-size: 1.5rem;
+    }
+    .card img {
+        height: auto;
+    }
+}
+    </style>
+
+  </head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-drak" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">SPICES</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto ">
+              <li class="nav-item">
+                <a class="nav-link" href="#Home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#About">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Product">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Contact">Contact</a>
+              </li>
+            </ul>
+            <button class="btn p-2 my-lg-0 my-2">Sign In</button>
+        </div>
+      </nav>
+          
+      <section id="Home">
+        <h1 class="text-center">ORGANIC SPICES</h1>
+        <p>Variety's the very spice of life,That gives it all its flavor</p>
+        <div class="input-group m-4">
+             <input type="text" class="form-control" placeholder="Email Address">
+             <button class="btn signin">Get Started</button>
+        </div>
+      </section>
+       
+<section id="About">
+  <div class="container-fluid">
+           <div class="row">
+            <div class="col-lg-6 col-md-6 col-12 pd-5 my-4">
+                <img src="3c73fdd7fc2aaf4aeb4c514ecd32665a-removebg-preview.png" class="img-fluid">
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 p-lg-5 p-2 my-5">
+              <h1>ABOUT US</h1>
+              <p>Organic Spices Inc, uses a combination of the most cutting edge technologies, to ensure complete food safety, both by destroying all pathogens, and at the same time avoiding all forms of hazardous pesticides,fungicides and radiation. This protects your business, your customers and ultimately your bottom line, while allowing you to provide customers food products that meet even the most demanding expectations.We supply commercial and industrial clients from the food industry with high grade spices and customized blends that are consistently outstanding in our industry. We would be happy to work with you on custom blending and we can use your recipe. Organic Spices Inc has an order minimum of 500 lbs per blend and all ingredients must be available in our inventory.
+                 </p>
+            </div>
+           </div>
+  </div>
+</section>
+<section id="Product">
+  <div class="container my-10">
+         <h1 class="text-center my-5">OUR PRODUCTS</h1>
+         <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="download (1).jpg" class="card-img-top">
+              <div class="card-body text-center">
+                <h5 class="card-title">Gram masala-&#8377 90</h5>
+                <a href="#" class="btn signin">Add to Cart</a>
+              </div>
+            </div>
+         </div>
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="chli.jfif" class="card-img-top">
+              <div class="card-body  text-center ">
+                <h5 class="card-title"> Chilli powder-&#8377 60</h5>
+                <a href="#" class="btn signin">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="besan.jfif" class="card-img-top">
+              <div class="card-body text-center">
+                <h5 class="card-title">Besan-&#8377 120</h5>
+                <a href="#" class="btn signin">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="container my-5">
+            <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="500-500g-pure-filter-coffee-powder-arabica-freshly-ground-original-imagfcrptbufhjbp.webp" class="card-img-top" >
+            <div class="card-body text-center">
+              <h5 class="card-title">Coffee powder-&#8377 80</h5>
+              <a href="#" class="btn signin">Add to Cart</a>
+            </div>
+          </div>
+          </div>
+            
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="turmeric-1-1030x687_1030x-removebg-preview.png" class="card-img-top" >
+            <div class="card-body text-center">
+              <h5 class="card-title">Turmeric powder-&#8377 40</h5>
+              <a href="#" class="btn signin">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="PANER-ABCD-121.jpg" class="card-img-top" >
+            <div class="card-body text-center">
+              <h5 class="card-title">Paneer-&#8377 140</h5>
+              <a href="#" class="btn signin">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="container my-5">
+          <div class="row">
+        <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <img src="dm.jfif" class="card-img-top" >
+          <div class="card-body text-center">
+            <h5 class="card-title">Chiken masala-&#8377 160</h5>
+            <a href="#" class="btn signin">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+          
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <img src="dm.jfif" class="card-img-top" >
+          <div class="card-body text-center">
+            <h5 class="card-title">Meat masala-&#8377 180</h5>
+            <a href="#" class="btn signin">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <img src="dm.jfif" class="card-img-top" >
+          <div class="card-body text-center">
+            <h5 class="card-title">Dalma masala-&#8377 90</h5>
+            <a href="#" class="btn signin">Add to Cart</a>
+          </div>
+       </div>
+        </div>
+      </div>
+  </div>
+</section>
+<section id="Contact">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-12">
+      <img src="spices1-500x500.webp" class="img-fluid">
+  </div>
+  <div class="col-lg-6 col-md-6 col-12">
+    <h1>CONTACT US</h1>
+    <form class="mb-3">
+      <input type="text" class="form-control" placeholder="Enter your name">
+      <input type="email" class="form-control" placeholder="Enter your Email">
+      <textarea class="form-control" placeholder="Enter your OTP"></textarea>
+      <button class="btn signin">Send OTP</button>
+    </form>
+</div>
+</section>
+
+<footer>&#169;Copyrights @harish2023</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
